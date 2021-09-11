@@ -1,38 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+ 
+</head>
+   
+
+<body style="padding-left: auto;padding-right: auto;">
+ 
+      <div class="container text-center" > 
+          <div class="work-day-scheduler-header">
+        <h3 >Work Day Scheduler</h3>
+      
+        <p id="current_day"></p>
+        <p id="current_time"></p>
+        
     </div>
+    <hr style="font-weight: 900;height: 2px;background: lightgray;width: 100%;">
+    <div class="schedule">
+        <!-- 0 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time" >00 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="00am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+    <!-- 1 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">01 AM </label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="01am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 2 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">02 AM </label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="02am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 3 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">03 AM </label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="03am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 4 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">04 AM </label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="04am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 5 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">05 AM </label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="05am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 6 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">06 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="06am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 7 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">07 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="07am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 8 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">08 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="08am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">09 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="09am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 10 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">10 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="10am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 11 AM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">11 AM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="11am"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 12 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">12 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="12pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 1 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">01 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="13pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 2 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">02 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="14pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 3 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">03 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="15pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 4 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">04 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="16pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 5 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">05 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="17pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 6 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">06 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="18pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 7 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">07 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="19pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 8 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">08 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="20pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 9 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">09 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="21pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 10 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">10 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="22pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+      
+      <!-- 11 PM -->
+      <div class="row">
+        <div class="event-group">
+            <label class="event-time">11 PM</label><hr class="hr">
+            <textarea class="form-control eventName" aria-label="With textarea" id="23pm"></textarea>
+            <button class="btn btn-outline-secondary" type="button" id="saveEvent" >Save</button>
+          </div>
+      </div>
+    </div>
+</div>
+</body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
 </html>
