@@ -42,6 +42,13 @@ $(document).on('click', '#saveEvent', function() {
     }
 });
 
+//Delete all event
+$(document).on('click', '#delete', function() {
+    {
+       localStorage.clear();
+    location.reload()
+    }
+});
       
 //Background color change
 function backgroundColor() {
@@ -57,11 +64,7 @@ function backgroundColor() {
             current_hour=Number(current_hour)+ + +12
         }
         if (Number(current_hour) > Number(time) ) {
-            // if( amOrPm== String($(this).attr("id")).slice(2)){
-                
             $(this).addClass("past");
-            // }
-            
         } else if (Number(current_hour) < Number(time) ) {
             console.log(time,amOrPm)
             $(this).addClass("future");
